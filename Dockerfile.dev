@@ -1,0 +1,5 @@
+FROM janusgraph/janusgraph:0.6.2
+
+RUN mkdir mydata
+    
+COPY ./mydata/* /mydata/
