@@ -14,6 +14,10 @@ services:
       - jce-network
     volumes:
       - ./mydata:/opt/janusgraph/mydata
+      - ./scripts:/opt/janusgraph/scripts/
+      - ./conf/gremlin-server-air-routes.yaml:/opt/janusgraph/conf/gremlin-server-air-routes.yaml
+      - ./conf/gremlin-server-nuboj-dev.yaml:/opt/janusgraph/conf/gremlin-server-nuboj-dev.yaml
+      - ./conf/tinkergraph-empty.properties:/opt/janusgraph/conf/tinkergraph-empty.properties
     healthcheck:
       test: ["CMD", "bin/gremlin.sh", "-e", "scripts/remote-connect.groovy"]
       interval: 10s
