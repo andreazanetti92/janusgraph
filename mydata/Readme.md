@@ -72,12 +72,11 @@ gremlin>conf.setProperty("gremlin.tinkergraph.edgeIdManager","LONG")
 gremlin>conf.setProperty("gremlin.tinkergraph.vertexPropertyIdManager","LONG")
 gremlin>graph = TinkerGraph.open(conf)
 ==>tinkergraph[vertices:0 edges:0]
-gremlin> graph.io(graphson()).readGraph('/opt/janusgraph/mydata/air-routes.graphml')
+gremlin> graph.io(graphson()).readGraph('/opt/janusgraph/mydata/nuboj_dev_things_db_2022_03_11.json')
 ==>null
 gremlin> g = graph.traversal()
 ==>graphtraversalsource[tinkergraph[vertices:3619 edges:50148], standard]
 ```    
-
   
     
 ### OR

@@ -1,6 +1,6 @@
 # JanusGraph with Apache Cassandra and Elasticsearch using Docker-Compose
 
-**Clone** the repo or **download** the zipped folder
+**Clone** the repo or **download** the zipped folder from [github](https://github.com/andreazanetti92/janusgraph)
 
 Open the path into the terminal or in VS Code
 
