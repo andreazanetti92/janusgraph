@@ -4,29 +4,50 @@
 
 Open the path into the terminal or in VS Code
 
-Run ***docker-compose up -d***
+Run:
+```
+docker-compose up -d
+```
 
 ## Working with Gremlin Console
 
-In the same terminal (or if you didn't provide the -d, in another terminal) run ***docker exec -it jce-janusgraph bin/gremlin.sh***
+In the same terminal (or if you didn't provide the -d, in another terminal) run:
+```
+docker exec -it jce-janusgraph bin/gremlin.sh
+```
 
-Into the gremlin console type the following 2 commands>   
-***graph = TinkerGraph.open()***   
-***g = graph.traversal()***
 
-Now load the graph into the gremlin server by running ***graph.io(graphml()).readGraph('/opt/janusgraph/mydata/air-routes.graphml')***
+Into the gremlin console type the following 2 commands:
+```
+graph = TinkerGraph.open()
+g = graph.traversal()
+```
 
-To check the loaded graph run ***graph*** into gremlin console.     
-Expected output: tinkergraph[vertices:3619 edges:50148]
+Now load the graph into the gremlin server by running 
+```
+graph.io(graphml()).readGraph('/opt/janusgraph/mydata/air-routes.graphml')
+```
+
+
+To check the loaded graph run ***graph*** into gremlin console. Expected output: 
+```
+tinkergraph[vertices:3619 edges:50148]
+```
+
 
 Now you're ready to traverse the graph into the gremlin-console!
 
 ## Working with JanusGraph Server and connect to it from a .NET Application
-After launched the ***docker-compose up -d***    
+After launched the 
+```
+docker-compose up -d
+```
 
-Run the command ***docker exec -it jce-janusgraph bin/janusgraph-server.sh conf/gremlin-server-air-routes.yaml***
-
-
+Run the command 
+```
+docker exec -it jce-janusgraph bin/janusgraph-server.sh conf/gremlin-server-air-routes.yaml
+```
+   
 Referencing a .NET 6 Web API's Program.cs and Gremlin.net nuget package:  
 
 ```

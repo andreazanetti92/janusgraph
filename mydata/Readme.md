@@ -4,12 +4,20 @@ There are 2 graph databases one in graphml and the other in json
 
 ## Load GRAPHML graph database   
 
-Aftern launched ***docker-compose up -d***       
+Aftern launched 
+```
+docker-compose up -d
+```
 
-Run ***docker exec -it jce-janusgraph bin/gremlin.sh***    
+
+Run: 
+```
+docker exec -it jce-janusgraph bin/gremlin.sh
+```
+
 
 Into the gremlin console run the 2 following commands to connect to the gremlin-server
-and run the commands directly into it    
+and run the commands directly into it:    
 
 ```
 gremlin> :remote connect tinkerpop.server conf/remote.yaml session
@@ -33,16 +41,22 @@ gremlin> g = graph.traversal()
 ```
 ### OR
 
-Aftern launched ***docker-compose up -d***       
+After launched:
+```
+docker-compose up -d
+```
 
-Run ***docker exec -it jce-janusgraph bin/gremlin.sh***    
+Run:
+```
+docker exec -it jce-janusgraph bin/gremlin.sh
+```
 
 ```
 gremlin> :load /opt/janusgraph/scripts/load-air-routes-graph.groovy
 ```
 
 Into the gremlin console run the 2 following commands to connect to the gremlin-server
-and run the commands directly into it    
+and run the commands directly into it:    
 
 ```
 gremlin> :remote connect tinkerpop.server conf/remote.yaml session
@@ -50,9 +64,17 @@ gremlin> :remote console
 ```
 
 ## Load GRAPHSON graph database
-Aftern launched ***docker-compose up -d***       
+Aftern launched 
+```
+docker-compose up -d
+```
 
-Run ***docker exec -it jce-janusgraph bin/gremlin.sh***    
+
+Run:
+```
+docker exec -it jce-janusgraph bin/gremlin.sh
+```
+
 
 Into the gremlin console run the 2 following commands to connect to the gremlin-server
 and run the commands directly into it    
@@ -81,13 +103,23 @@ gremlin> g = graph.traversal()
     
 ### OR
 
-Aftern launched ***docker-compose up -d***       
+Aftern launched:
+```
+docker-compose up -d
+```
 
-Run ***docker exec -it jce-janusgraph bin/gremlin.sh***    
+
+Run:
+```
+docker exec -it jce-janusgraph bin/gremlin.sh
+```
+
 
 ```
 gremlin> :load /opt/janusgraph/scripts/load-nuboj-dev-graph.groovy
 ```
+
+You can already work with the graph with just the command above
 
 Into the gremlin console run the 2 following commands to connect to the gremlin-server
 and run the commands directly into it:   
